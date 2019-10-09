@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User {
-    var name = ""
+struct User {
+    var name = "sawant"
     var password = ""
 }

@@ -11,7 +11,8 @@ import Foundation
 class UserViewModel {
     private let mininumUserNameLength = 4
     private let minimumPasswordLength = 8
-    private var user = User()
+    
+    var user = User()
     
     var userName: String {
         return user.name
@@ -40,7 +41,7 @@ class UserViewModel {
     
     func validate() -> String {
         if user.name.isEmpty || user.password.isEmpty {
-            return "Username and password are"
+            return "Username and password are required."
         }
         
         if user.name.count < mininumUserNameLength {
@@ -56,7 +57,6 @@ class UserViewModel {
     func login() {
         startAccessCodeTimer()
     }
-    
     
 //    var accessCode: Int? {
 //        didSet {
